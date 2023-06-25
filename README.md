@@ -21,3 +21,12 @@ $ pip install -v --disable-pip-version-check --no-cache-dir ./apex
 ```
 
 ## Reproduce the results
+In order to reproduce the results on the Semtab2019 dataset, please go through the following steps:
+1. Download the pre-processed related table data following the instructions provided in [semtab_data](https://github.com/ysunbp/CORDA/tree/main/semtab_data).
+2. Run run-epida-rl-inner-semtab.py file.
+3. The checkpoints will be stored in the [semtab_checkpoints](https://github.com/ysunbp/CORDA/tree/main/semtab_checkpoints) folder.
+
+In order to reproduce the results on the WebTables dataset, please go through the following steps:
+1. Download the pre-processed related table data following the instructions provided in [sato_data](https://github.com/ysunbp/CORDA/tree/main/sato_data).
+2. Run run-epida-rl-inner.py file.
+3. The checkpoints will be stored in the [sato_checkpoints](https://github.com/ysunbp/CORDA/tree/main/sato_checkpoints) folder.
