@@ -1,6 +1,8 @@
 # CORDA
 
-This is the github repository for the CORDA model
+This is the GitHub repository for the CORDA model. CORDA model enhances the annotation performance of the column semantic types by jointly encoding both intra- and inter-table context information as well as fully utilizing both labeled and unlabeled data.
+
+![Overview of RECA](./pipeline.drawio.pdf)
 
 ## Requirements
 
