@@ -37,8 +37,8 @@ class SADataset(data.Dataset): #copy from BTDataset class
         folds = [1,3,4]
 
         rel_dict = {}
-        jsonl_path1 = '/CORDA/semtab_data/test_hard_jaccard_ranking.jsonl'
-        jsonl_path2 = '/CORDA/semtab_data/train_val_hard_jaccard_ranking.jsonl'
+        jsonl_path1 = '/CORDA/semtab_data/file1.jsonl'
+        jsonl_path2 = '/CORDA/semtab_data/file2.jsonl'
         with jsonlines.open(jsonl_path1) as f:
             for line in f:
                 rel_dict[line['filename']] = line['related_table']
