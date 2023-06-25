@@ -282,34 +282,6 @@ def preprocess_date_name(): # process the DATE and PERSON types, output washed j
                 json.dump(out_json, of)
 
 
-def editDistance(str1, str2, m, n): # Compute the edit distance between two strings
- 
-    # If first string is empty, the only option is to
-    # insert all characters of second string into first
-    if m == 0:
-        return n
- 
-    # If second string is empty, the only option is to
-    # remove all characters of first string
-    if n == 0:
-        return m
- 
-    # If last characters of two strings are same, nothing
-    # much to do. Ignore last characters and get count for
-    # remaining strings.
-    if str1[m-1] == str2[n-1]:
-        return editDistance(str1, str2, m-1, n-1)
- 
-    # If last characters are not same, consider all three
-    # operations on last character of first string, recursively
-    # compute minimum cost for all three operations and take
-    # minimum of three values.
-    return 1 + min(editDistance(str1, str2, m, n-1),    # Insert
-                   editDistance(str1, str2, m-1, n),    # Remove
-                   editDistance(str1, str2, m-1, n-1)    # Replace
-                   )
-
-
 def generate_distance(): # Compute the edit distances between any two table schemata and save as json files
     type_dict = {'CARDINAL':'A', 'DATE1':'B','DATE2':'C', 'DATE3':'D', 'DATE4':'E', 'DATE5':'F', 'EVENT':'G', 'FAC':'H', 'GPE':'I', 'LANGUAGE':'J', 'LAW':'K', 'LOC':'L', 'MONEY':'M', 'NORP':'N', 'ORDINAL':'O', 'ORG':'P', 'PERCENT':'Q', 'PERSON1':'R','PERSON2':'S', 'PRODUCT':'T', 'QUANTITY':'U', 'TIME':'V', 'WORK_OF_ART':'W', 'EMPTY':'X'}
     washed_json_base = './jsons/K'
